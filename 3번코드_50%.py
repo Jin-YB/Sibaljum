@@ -1,4 +1,6 @@
-result_data="안녕하세요"  # 안녕하세요는 샘플 이자리에 ocr 데이터 불러서 적용
+import Runcode # 파일간 연결
+
+result_data=Runcode.result_join  # 안녕하세요는 샘플 이자리에 ocr 데이터 불러서 적용
 data=list(result_data)
 uni_data=[]
 count=len(data)
