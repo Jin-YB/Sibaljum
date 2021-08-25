@@ -1,12 +1,15 @@
 import Runcode # 파일간 연결
 
-result_data=Runcode.result_join  # 안녕하세요는 샘플 이자리에 ocr 데이터 불러서 적용
-data=list(result_data)
-uni_data=[]
-count=len(data)
-cho_uni=[]
-joong_uni=[]
-jong_uni=[]
+result_data = Runcode.result_join
+#result_data="ㄱ ㅏ ㄱ" #테스트용
+data = list(result_data)
+
+print(data)
+uni_data = []
+count = len(data)
+cho_uni = []
+joong_uni = []
+jong_uni = []
 
 
 
@@ -23,6 +26,7 @@ def trance_uni():
         print(joong_uni[i])
         print(jong_uni[i])
         # 여기까지 테스트용 출력
+
 
 
 trance_uni()
