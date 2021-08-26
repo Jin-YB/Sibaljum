@@ -25,7 +25,7 @@ def start_data():
 
         elif 97 <= code_3rd.uni_data[stk] <= 122:  # 유니코드 소문자 영어 범위
             code_3rd.trans_uni_en_s(stk)
-            dot_data_eng.eng_c()
+            dot_data_eng.eng_s()
             circuit.play()
 
         elif 48 <= code_3rd.uni_data[stk] <= 57:
