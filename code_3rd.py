@@ -14,8 +14,12 @@ eng_uni_c = []
 eng_uni_s = []
 
 
-def trans_uni_ko(seq):
+def uni_set():
+    for i in range(count):
+        uni_data.append(ord(data[i]))
 
+
+def trans_uni_ko(seq):
     cho_uni.append((uni_data[seq] - 44032) // 588)  # 초성
     joong_uni.append(((uni_data[seq] - 44032) % 588) // 28)  # 중성
     jong_uni.append(((uni_data[seq] - 44032) % 588) % 28)  # 종성
@@ -42,21 +46,4 @@ def trans_uni_en_s(seq):
 
 
 
-def start_data():
-    for i in range(count):
-        uni_data.append(ord(data[i]))
-    stk = 0
-    while stk < count:
 
-        if 44032 <= uni_data[stk] <= 55203:  # 유니코드 한글 범위
-            trans_uni_ko(stk)
-
-        if 65 <= uni_data[stk] <= 90:  # 유니코드 대문자 영어 범위
-            trans_uni_en_c(stk)
-
-        if 97 <= uni_data[stk] <= 122:  # 유니코드 소문자 영어 범위
-            trans_uni_en_s(stk)
-
-        stk += 1
-
-start_data()
