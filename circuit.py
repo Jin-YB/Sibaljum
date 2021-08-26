@@ -3,7 +3,7 @@ import dot_data_eng
 import time
 
 delay = 0.01  # 딜레이 시간
-#임시 회로 시뮬레이터
+# 임시 회로 시뮬레이터
 def play():
     for i in range(2):
         for j in range(6):
