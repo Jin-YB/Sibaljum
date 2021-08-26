@@ -37,7 +37,7 @@ def start_data():
 
         elif 48 <= code_3rd.uni_data[stk] <= 57:
             code_3rd.trans_uni_number(stk)
-            dot_data_eng.number_()
+            dot_data_eng.number_()  
             circuit.play()
             print("숫자\n")                               # 테스트용
             dot_data.reset()
