@@ -3,38 +3,19 @@ import dot_data_eng
 import time
 
 delay = 0.01  # 딜레이 시간
+#임시 회로 시뮬레이터
+def play():
+    for i in range(2):
+        for j in range(6):
+            if dot_data.dot[i][j] == 1:
+                print("D")
+            elif dot_data.dot[i][j] == 0:
+                print("I")
 
-def play(seq):
-    for i in range(6):
-        if dot_data.dot_cho[seq][i] == 1:
-            print("D")
-        elif dot_data.dot_cho[seq][i] == 0:
-            print("I")
-
-        if dot_data.dot_joong[seq][i] == 1:
-            print("D")
-        elif dot_data.dot_joong[seq][i] == 0:
-            print("I")
-
-        if dot_data.dot_jong[seq][i] == 1:
-            print("D")
-        elif dot_data.dot_jong[seq][i] == 0:
-            print("I")
-
-        if dot_data_eng.dot_eng_c[seq][i] == 1:
-            print("D")
-        elif dot_data_eng.dot_eng_c[seq][i] == 0:
-            print("I")
-
-        if dot_data_eng.dot_eng_s[seq][i] == 1:
-            print("D")
-        elif dot_data_eng.dot_eng_s[seq][i] == 0:
-            print("I")
-
-        if dot_data_eng.dot_number[seq][i] == 1:
-            print("D")
-        elif dot_data_eng.dot_number[seq][i] == 0:
-            print("I")
+    dot_data.reset()
 
     time.sleep(delay)
+    print("")
+
+
 
