@@ -8,3 +8,4 @@ result_join = " ".join(result)
 # 리스트로 나온거 한 문자열로 통합
 # print(result_join[0])
 # 테스트용 첫번째 글자 출력
+
