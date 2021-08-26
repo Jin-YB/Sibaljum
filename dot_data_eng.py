@@ -30,7 +30,7 @@ def eng_s():
 
 
 
-def number():
+def number_():
     if code_3rd.all_list[2][0] == 0:
         dot_data.dot[0][0] = 0
         dot_data.dot[0][1] = 0
