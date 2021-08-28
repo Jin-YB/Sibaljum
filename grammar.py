@@ -1,53 +1,86 @@
 import code_3rd
 
 grammar_10_uni = []
-grammar_10_count = [0] * code_3rd.count
-grammar_11_uni1 = []
-grammar_11_count = [0] * code_3rd.count
+grammar_11_uni = []
+grammar_12_uni = []
 
 
-def grammar_10():
+def grammar_10(a):
 
     for i in range(code_3rd.count):
         grammar_10_uni.append(((code_3rd.uni_data[i] - 44032) % 588) % 28)
-    a = 0
-
 
     # 제 10항 모음 + '예' 50696 모음
 
-    while a < code_3rd.count:
-        b = a + 1
-        if code_3rd.count-1 == a:
-            break
-
         if grammar_10_uni[a] == 0:
             if 50726 >= code_3rd.uni_data[b] >= 50696:
-                grammar_10_count[a] = 1
+                code_3rd.all_list[3][0] = 0
             else:
-                grammar_10_count[a] = 0
-        a += 1
+                code_3rd.all_list[3][0] = -1
 
 
-def grammar_11():
+def grammar_11(a):
     # 제 11항 모음(ㅑ,ㅘ,ㅜ,ㅝ) + '애' 50528 모음
     for i in range(code_3rd.count):
-        grammar_11_uni1.append(((code_3rd.uni_data[i] - 44032) % 588) % 28)
+        grammar_11_uni.append(((code_3rd.uni_data[i] - 44032) % 588) % 28)
 
-    a = 0
-    while a < code_3rd.count:
-        b = a + 1
-        if code_3rd.count - 1 == a:
-            break
-
-        if grammar_11_uni1[a] == 0:
-            for i in range(24):
-                if code_3rd.uni_data[a] == (44088 + (588 * i)) or code_3rd.uni_data[a] == (44284 + (588 * i)) or \
+    if grammar_11_uni[a] == 0:
+        for i in range(24):
+            if code_3rd.uni_data[a] == (44088 + (588 * i)) or code_3rd.uni_data[a] == (44284 + (588 * i)) or \
                         code_3rd.uni_data[a] == (44396 + (588 * i)) or code_3rd.uni_data[a] == (44424 + (588 * i)):
-                    if 50555 >= code_3rd.uni_data[b] >= 50528:  # 애 ~ 앻
-                        grammar_11_count[a] = 1
-                    else:
-                        grammar_11_count[a] = 0
-        a += 1
+                if 50555 >= code_3rd.uni_data[b] >= 50528:  # 애 ~ 앻
+                    code_3rd.all_list[3][0] = 0
+                else:
+                    code_3rd.all_list[3][0] = -1
+
+
+
+def grammar_12(a):
+    for i in range(code_3rd.count):
+        grammar_12_uni.append(code_3rd.uni_data[i])
+        code_3rd.jong_uni.append(((code_3rd.uni_data[i] - 44032) % 588) % 28)  # 종성
+
+    # all_list[3][0]: {0,~11}={이음줄,가,나,다,마,바,사,자,카,타,파,하}
+
+    if 44032 <= grammar_12_uni[a] <= 44059:
+        code_3rd.all_list[3][0] = 1
+
+    elif 445208 <= grammar_12_uni[a] <= 45235:
+        code_3rd.all_list[3][0] = 2
+
+    elif 45796 <= grammar_12_uni[a] <= 45823:
+        code_3rd.all_list[3][0] = 3
+
+    elif 47560 <= grammar_12_uni[a] <= 47587:
+        code_3rd.all_list[3][0] = 4
+
+    elif 48148 <= grammar_12_uni[a] <= 48175:
+        code_3rd.all_list[3][0] = 5
+
+    elif 49324 <= grammar_12_uni[a] <= 49351:
+        code_3rd.all_list[3][0] = 6
+
+    elif 51088 <= grammar_12_uni[a] <= 51115:
+        code_3rd.all_list[3][0] = 7
+
+    elif 52852 <= grammar_12_uni[a] <= 52879:
+        code_3rd.all_list[3][0] = 8
+
+    elif 53440 <= grammar_12_uni[a] <= 53467:
+        code_3rd.all_list[3][0] = 9
+
+    elif 54028 <= grammar_12_uni[a] <= 54055:
+        code_3rd.all_list[3][0] = 10
+
+    elif 54616 <= grammar_12_uni[a] <= 54643:
+        code_3rd.all_list[3][0] = 11
+
+    else:
+        code_3rd.all_list[3][0] = -1
+
+    code_3rd.all_list[0][0] = -1
+    code_3rd.all_list[0][1] = -1
+    code_3rd.all_list[0][2] = code_3rd.jong_uni[a]
 
 
 """
@@ -57,14 +90,33 @@ def grammar_11():
 """
 # 테스트용
 code_3rd.uni_set()
-grammar_10()
-grammar_11()
 
-for i in range(code_3rd.count):
-    if grammar_10_count[i] == 1:
+i = 0
+while i < code_3rd.count:
+    b = i + 1
+
+    if code_3rd.count - 1 == i:
+        if code_3rd.all_list[3][0] == 0:
+            print(i)
+        elif code_3rd.all_list[3][0] == -1:
+            print("X")
+        break
+    grammar_10(i)
+    if code_3rd.all_list[3][0] == 0:
         print(i)
-    elif grammar_11_count[i] == 1:
-        print(i)
-    else:
+    elif code_3rd.all_list[3][0] == -1:
         print("X")
 
+
+    i += 1
+
+"""grammar_11(i)
+    if code_3rd.all_list[3][0] == 0:
+        print(i)
+    elif code_3rd.all_list[3][0] == -1:
+        print("X")
+    grammar_12(i)
+    if code_3rd.all_list[3][0] == 0:
+        print(i)
+    elif code_3rd.all_list[3][0] == -1:
+        print("X")"""
