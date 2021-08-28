@@ -185,9 +185,9 @@ def grammar_12_ka():
             break
 
         if 52852 <= grammar_12_uni[a] <= 52879:
-            grammar_12_ga_count[a] = 1
+            grammar_12_ka_count[a] = 1
         else:
-            grammar_12_ga_count[a] = 0
+            grammar_12_ka_count[a] = 0
         a += 1
 
 
