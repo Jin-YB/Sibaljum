@@ -1,6 +1,6 @@
 import code_3rd
 
-stk=0
+stk = 0
 dot = [[-1 for col_e in range(6)] for row_e in range(2)]
 #  -1 은 초기값 (초기화)
 
