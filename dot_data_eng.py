@@ -757,6 +757,14 @@ def number_():
 
 
 def sign():
+    if code_3rd.all_list[2][1] == 44:  # ,
+        dot_data.dot[0][0] = 0
+        dot_data.dot[0][1] = 1
+        dot_data.dot[0][2] = 0
+        dot_data.dot[0][3] = 0
+        dot_data.dot[0][4] = 0
+        dot_data.dot[0][5] = 0
+
     if code_3rd.all_list[2][1] == 44:
         dot_data.dot[0][0] = 0
         dot_data.dot[0][1] = 1
