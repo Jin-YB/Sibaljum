@@ -1,7 +1,7 @@
 # import Runcode # 파일간 연결
 
 # result_data = Runcode.result_join
-result_data = "가예옥예구예"  # 테스트용
+result_data = "노예와애예"  # 테스트용
 data = list(result_data)  #
 
 # print(data)
