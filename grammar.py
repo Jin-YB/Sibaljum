@@ -14,6 +14,7 @@ def grammar_10():
 
 
     # 제 10항 모음 + '예' 50696 모음
+
     while a < code_3rd.count:
         b = a + 1
         if code_3rd.count-1 == a:
@@ -28,6 +29,7 @@ def grammar_10():
 
 
 def grammar_11():
+    # 제 11항 모음(ㅑ,ㅘ,ㅜ,ㅝ) + '애' 50528 모음
     for i in range(code_3rd.count):
         grammar_11_uni1.append(((code_3rd.uni_data[i] - 44032) % 588) % 28)
 

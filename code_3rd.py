@@ -1,9 +1,9 @@
 # import Runcode # 파일간 연결
 
 # result_data = Runcode.result_join
-result_data = "노예와애예"  # 테스트용
+result_data = "  "  # 테스트용
 data = list(result_data)  #
-
+#{안녕하세요}
 # print(data)
 uni_data = []
 count = len(data)
@@ -17,7 +17,7 @@ sign_uni = []
 
 all_list = [[-1 for col_n in range(3)] for row_n in range(3)]
 
-#  list_len = len(all_list)
+# list_len = len(all_list)
 
 
 """"
