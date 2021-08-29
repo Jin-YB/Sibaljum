@@ -168,7 +168,112 @@ def reset():                    # 초기화
         for j in range(6):
             dot[i][j] = -1
 
+def grammar():
+    if code_3rd.all_list[3][0] == 0:  #  그래서
+        dot[0][0] = 1
+        dot[0][1] = 0
+        dot[0][2] = 0
+        dot[0][3] = 0
+        dot[0][4] = 0
+        dot[0][5] = 0
 
+        dot[1][0] = 0
+        dot[1][1] = 1
+        dot[1][2] = 1
+        dot[1][3] = 1
+        dot[1][4] = 0
+        dot[1][5] = 0
+        
+    if code_3rd.all_list[3][0] == 1:  #  그러나
+        dot[0][0] = 1
+        dot[0][1] = 0
+        dot[0][2] = 0
+        dot[0][3] = 0
+        dot[0][4] = 0
+        dot[0][5] = 0
+
+        dot[1][0] = 1
+        dot[1][1] = 0
+        dot[1][2] = 0
+        dot[1][3] = 1
+        dot[1][4] = 0
+        dot[1][5] = 0
+        
+    if code_3rd.all_list[3][0] == 2:  #  그러면
+        dot[0][0] = 1
+        dot[0][1] = 0
+        dot[0][2] = 0
+        dot[0][3] = 0
+        dot[0][4] = 0
+        dot[0][5] = 0
+
+        dot[1][0] = 0
+        dot[1][1] = 1
+        dot[1][2] = 0
+        dot[1][3] = 0
+        dot[1][4] = 1
+        dot[1][5] = 0
+        
+    if code_3rd.all_list[3][0] == 3:  #  그러므로 
+        dot[0][0] = 1
+        dot[0][1] = 0
+        dot[0][2] = 0
+        dot[0][3] = 0
+        dot[0][4] = 0
+        dot[0][5] = 0
+
+        dot[1][0] = 0
+        dot[1][1] = 1
+        dot[1][2] = 0
+        dot[1][3] = 0
+        dot[1][4] = 0
+        dot[1][5] = 1
+        
+    if code_3rd.all_list[3][0] == 4:  #  그런데
+        dot[0][0] = 1
+        dot[0][1] = 0
+        dot[0][2] = 0
+        dot[0][3] = 0
+        dot[0][4] = 0
+        dot[0][5] = 0
+
+        dot[1][0] = 1
+        dot[1][1] = 0
+        dot[1][2] = 1
+        dot[1][3] = 1
+        dot[1][4] = 1
+        dot[1][5] = 0
+        
+    if code_3rd.all_list[3][0] == 5:  #  그리고
+        dot[0][0] = 1
+        dot[0][1] = 0
+        dot[0][2] = 0
+        dot[0][3] = 0
+        dot[0][4] = 0
+        dot[0][5] = 0
+
+        dot[1][0] = 1
+        dot[1][1] = 0
+        dot[1][2] = 1
+        dot[1][3] = 0
+        dot[1][4] = 0
+        dot[1][5] = 1
+        
+    if code_3rd.all_list[3][0] == 6:  # 그리하여
+        dot[0][0] = 1
+        dot[0][1] = 0
+        dot[0][2] = 0
+        dot[0][3] = 0
+        dot[0][4] = 0
+        dot[0][5] = 0
+
+        dot[1][0] = 1
+        dot[1][1] = 0
+        dot[1][2] = 0
+        dot[1][3] = 0
+        dot[1][4] = 1
+        dot[1][5] = 1
+        
 """while (stk < code_3rd.count):
     cho()
     joong()

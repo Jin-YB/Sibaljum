@@ -4,6 +4,7 @@ grammar_10_uni = []
 grammar_10_count = [0] * code_3rd.count
 grammar_11_uni1 = []
 grammar_11_count = [0] * code_3rd.count
+grammar_18_uni = [0] * code_3rd.count
 
 
 def grammar_10():
@@ -50,7 +51,77 @@ def grammar_11():
         a += 1
 
 
-def grammer_18():
+""" 시작 글자 -> 그 """   # 앞자리 비었을때로 예외처리, all_list로 순서 정하기
+
+
+def grammar_18():
+    for j in range(code_3rd.count):
+        grammar_18_uni.append(code_3rd.uni_data[i])
+    a = 0
+    while a < code_3rd.count-3:
+        if a == 0:   # 처음시작(빈공간 당연히 x)
+            if grammar_18_uni[a] == 44536:   # "그"
+                if grammar_18_uni[a+1] == 47000:    # "래"
+                    if grammar_18_uni[a+2] == 49436:    # 그래서
+                        code_3rd.all_list[3][0] = 0
+                        a += 2
+                elif grammar_18_uni[a+1] == 47084:    # "러"
+                    if grammar_18_uni[a+2] == 45208:   # 그러나
+                        code_3rd.all_list[3][0] = 1
+                        a += 2
+                    elif grammar_18_uni[a+2] == 47732:   # 그러면
+                        code_3rd.all_list[3][0] = 2
+                        a += 2
+                    elif grammar_18_uni[a+2] == 48064:   # "므"
+                        if grammar_18_uni[a+3] == 47196:   # 그러므로
+                            code_3rd.all_list[3][0] = 3
+                            a += 3
+                elif grammar_18_uni[a+1] == 47088:   # "런"
+                    if grammar_18_uni[a+2] == 45936:   # 그런데
+                        code_3rd.all_list[3][0] = 4
+                        a += 2
+                elif grammar_18_uni[a+1] == 47532:   # "리"
+                    if grammar_18_uni[a+2] == 44256:   # 그리고
+                        code_3rd.all_list[3][0] = 5
+                        a += 2
+                    elif grammar_18_uni[a+2] == 54616:   # "하"
+                        if grammar_18_uni[a+3] == 50668:   # 그리하여
+                            code_3rd.all_list[3][0] = 6
+                            a += 3
+        else:  # 앞에 공간이 있을 때
+            if grammar_18_uni[a-1] == 32:  # 앞이 공백일 경우
+                if grammar_18_uni[a] == 44536:  # "그"
+                    if grammar_18_uni[a + 1] == 47000:  # "래"
+                        if grammar_18_uni[a + 2] == 49436:  # 그래서
+                            code_3rd.all_list[3][0] = 0
+                            a += 3
+                    elif grammar_18_uni[a + 1] == 47084:  # "러"
+                        if grammar_18_uni[a + 2] == 45208:  # 그러나
+                            code_3rd.all_list[3][0] = 1
+                            a += 2
+                        elif grammar_18_uni[a + 2] == 47732:  # 그러면
+                            code_3rd.all_list[3][0] = 2
+                            a += 2
+                        elif grammar_18_uni[a + 2] == 48064:  # "므"
+                            if grammar_18_uni[a + 3] == 47196:  # 그러므로
+                                code_3rd.all_list[3][0] = 3
+                                a += 3
+                    elif grammar_18_uni[a + 1] == 47088:  # "런"
+                        if grammar_18_uni[a + 2] == 45936:  # 그런데
+                            code_3rd.all_list[3][0] = 4
+                            a += 2
+                    elif grammar_18_uni[a + 1] == 47532:  # "리"
+                        if grammar_18_uni[a + 2] == 44256:  # 그리고
+                            code_3rd.all_list[3][0] = 5
+                            a += 2
+                        elif grammar_18_uni[a + 2] == 54616:  # "하"
+                            if grammar_18_uni[a + 3] == 50668:  # 그리하여
+                                code_3rd.all_list[3][0] = 6
+                                a += 3
+            else:   # 공백이 아닌 경우
+                continue
+
+        a += 1
 
 
 """
@@ -70,4 +141,3 @@ for i in range(code_3rd.count):
         print(i)
     else:
         print("X")
-
