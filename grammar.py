@@ -48,6 +48,9 @@ def grammar_11():
         a += 1
 
 
+def grammer_18():
+
+
 """
     if code_3rd.data[a] == 0:
         print(0)
