@@ -250,28 +250,28 @@ def joong():
         dot[0][3] = 1
         dot[0][4] = 0
         dot[0][5] = 1
-    if code_3rd.all_list[0][1] == 7:      # ㅣ ={1 0 1 0 1 0}
+    if code_3rd.all_list[0][1] == 9:      # ㅣ ={1 0 1 0 1 0}
         dot[0][0] = 1
         dot[0][1] = 0
         dot[0][2] = 1
         dot[0][3] = 0
         dot[0][4] = 1
         dot[0][5] = 0
-    if code_3rd.all_list[0][1] == 8:      # ㅐ ={1 1 1 0 1 0}
+    if code_3rd.all_list[0][1] == 10:      # ㅐ ={1 1 1 0 1 0}
         dot[0][0] = 1
         dot[0][1] = 1
         dot[0][2] = 1
         dot[0][3] = 0
         dot[0][4] = 1
         dot[0][5] = 0
-    if code_3rd.all_list[0][1] == 9:      # ㅔ ={1 0 1 1 1 0}
+    if code_3rd.all_list[0][1] == 11:      # ㅔ ={1 0 1 1 1 0}
         dot[0][0] = 1
         dot[0][1] = 0
         dot[0][2] = 1
         dot[0][3] = 1
         dot[0][4] = 1
         dot[0][5] = 0
-    if code_3rd.all_list[0][0] == 10:  # ㅒ ={0 0 1 1 1 0} {1 1 1 0 1 0}
+    if code_3rd.all_list[0][0] == 12:  # ㅒ ={0 0 1 1 1 0} {1 1 1 0 1 0}
         dot[0][0] = 0             
         dot[0][1] = 0
         dot[0][2] = 1
@@ -285,21 +285,21 @@ def joong():
         dot[1][3] = 0
         dot[1][4] = 1
         dot[1][5] = 0
-    if code_3rd.all_list[0][1] == 11:      # ㅖ ={0 0 1 1 0 0}
+    if code_3rd.all_list[0][1] == 13:      # ㅖ ={0 0 1 1 0 0}
         dot[0][0] = 0
         dot[0][1] = 0
         dot[0][2] = 1
         dot[0][3] = 1
         dot[0][4] = 0
         dot[0][5] = 0
-    if code_3rd.all_list[0][1] == 12:      # ㅘ ={1 1 1 0 0 1}
+    if code_3rd.all_list[0][1] == 14:      # ㅘ ={1 1 1 0 0 1}
         dot[0][0] = 1
         dot[0][1] = 1
         dot[0][2] = 1
         dot[0][3] = 0
         dot[0][4] = 0
         dot[0][5] = 1
-    if code_3rd.all_list[0][0] == 13:  # ㅙ ={1 1 1 0 0 1} {1 1 1 0 1 0}
+    if code_3rd.all_list[0][0] == 15:  # ㅙ ={1 1 1 0 0 1} {1 1 1 0 1 0}
         dot[0][0] = 1             
         dot[0][1] = 1
         dot[0][2] = 1
@@ -313,21 +313,21 @@ def joong():
         dot[1][3] = 0
         dot[1][4] = 1
         dot[1][5] = 0
-    if code_3rd.all_list[0][1] == 14:      # ㅚ ={1 0 1 1 1 1}
+    if code_3rd.all_list[0][1] == 16:      # ㅚ ={1 0 1 1 1 1}
         dot[0][0] = 1
         dot[0][1] = 0
         dot[0][2] = 1
         dot[0][3] = 1
         dot[0][4] = 1
         dot[0][5] = 1
-    if code_3rd.all_list[0][1] == 15:      # ㅝ ={1 1 1 1 0 0}
+    if code_3rd.all_list[0][1] == 17:      # ㅝ ={1 1 1 1 0 0}
         dot[0][0] = 1
         dot[0][1] = 1
         dot[0][2] = 1
         dot[0][3] = 1
         dot[0][4] = 0
         dot[0][5] = 0
-    if code_3rd.all_list[0][0] == 16:  # ㅞ ={1 1 1 1 0 0} {1 1 1 0 1 0}
+    if code_3rd.all_list[0][0] == 18:  # ㅞ ={1 1 1 1 0 0} {1 1 1 0 1 0}
         dot[0][0] = 1             
         dot[0][1] = 1
         dot[0][2] = 1
@@ -341,7 +341,7 @@ def joong():
         dot[1][3] = 0
         dot[1][4] = 1
         dot[1][5] = 0
-    if code_3rd.all_list[0][0] == 17:  # ㅟ ={1 0 1 1 0 0} {1 1 1 0 1 0}
+    if code_3rd.all_list[0][0] == 19:  # ㅟ ={1 0 1 1 0 0} {1 1 1 0 1 0}
         dot[0][0] = 1             
         dot[0][1] = 0
         dot[0][2] = 1
@@ -355,7 +355,7 @@ def joong():
         dot[1][3] = 0
         dot[1][4] = 1
         dot[1][5] = 0
-    if code_3rd.all_list[0][1] == 18:      # ㅢ ={0 1 0 1 1 1}
+    if code_3rd.all_list[0][1] ==20:      # ㅢ ={0 1 0 1 1 1}
         dot[0][0] = 0
         dot[0][1] = 1
         dot[0][2] = 0
