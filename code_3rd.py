@@ -3,7 +3,7 @@
 # result_data = Runcode.result_join
 result_data = "  "  # 테스트용
 data = list(result_data)  #
-#{안녕하세요}
+#{그리고세요}
 # print(data)
 uni_data = []
 count = len(data)
