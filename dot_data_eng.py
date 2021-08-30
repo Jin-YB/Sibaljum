@@ -606,17 +606,15 @@ def eng_s():
 
 def number_():
     # 숫자가 나올때 첫자리에만 수표를 표기하므로 code_3rd.data[]에 앞인덱스의 값이 숫자인지 비교후
-    if code_3rd.count != 0:
-        stk_num = code_3rd.count-1
-"""
-    if 
+
+    if code_3rd.all_list[3][3] == 0:
         dot_data.dot[0][0] = 0
         dot_data.dot[0][1] = 0
         dot_data.dot[0][2] = 1
         dot_data.dot[0][3] = 1
         dot_data.dot[0][4] = 1
         dot_data.dot[0][5] = 1
-"""
+
     if code_3rd.all_list[2][0] == 1:
 
         dot_data.dot[0][0] = 1
