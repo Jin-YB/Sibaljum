@@ -355,7 +355,7 @@ def joong():
         dot[1][3] = 0
         dot[1][4] = 1
         dot[1][5] = 0
-    if code_3rd.all_list[0][1] ==20:      # ㅢ ={0 1 0 1 1 1}
+    if code_3rd.all_list[0][1] == 20:      # ㅢ ={0 1 0 1 1 1}
         dot[0][0] = 0
         dot[0][1] = 1
         dot[0][2] = 0
