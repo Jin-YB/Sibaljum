@@ -3,6 +3,7 @@ import dot_data
 import dot_data_eng
 import circuit
 
+
 def start_data():
     code_3rd.uni_set()
     stk = 0

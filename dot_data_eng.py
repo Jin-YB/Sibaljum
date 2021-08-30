@@ -699,6 +699,7 @@ def number_():
         dot_data.dot[0][5] = 0
 
 
+
 def sign():  #  총 14개 ' ' '!' '(' ')' ',' '.' '/' ':' ';' '?' '[' ']' '{' '}'
     if code_3rd.all_list[2][1] == 32:  # ' ' 공백
         dot_data.dot[0][0] = 0

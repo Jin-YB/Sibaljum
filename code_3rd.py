@@ -3,7 +3,7 @@
 # result_data = Runcode.result_join
 result_data = "  "  # 테스트용
 data = list(result_data)  #
-#{안녕하세요}
+#{그리고세요}
 # print(data)
 uni_data = []
 count = len(data)
@@ -15,7 +15,7 @@ eng_uni_s = []
 num_uni = []
 sign_uni = []
 
-all_list = [[-1 for col_n in range(3)] for row_n in range(3)]
+all_list = [[-1 for col_n in range(4)] for row_n in range(4)]
 
 # list_len = len(all_list)
 
@@ -25,7 +25,7 @@ all_list = [[-1 for col_n in range(3)] for row_n in range(3)]
 # [0][0]=한글.초성 [0][1]=한글.중성 [0][2]=한글.종성
 # [1][0]=알파벳.대문자 [1][1]=알파벳.소문자
 # [2][0]=아라비아 숫자 [2][1]=기호
-# [3][a]=문법 [3][0]=grammar18 
+# [3][0]=한글.글자 [3][1]=한글.단어 [3][2]=영어 [3][3]=숫자
 """
 
 
