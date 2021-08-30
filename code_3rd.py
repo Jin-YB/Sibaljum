@@ -1,7 +1,7 @@
 # import Runcode # 파일간 연결
 
 # result_data = Runcode.result_join
-result_data = "  "  # 테스트용
+result_data = "그리고가"  # 테스트용
 data = list(result_data)  #
 #{그리고세요}
 # print(data)
@@ -14,7 +14,7 @@ eng_uni_c = []
 eng_uni_s = []
 num_uni = []
 sign_uni = []
-
+idx = 0
 all_list = [[-1 for col_n in range(4)] for row_n in range(4)]
 
 # list_len = len(all_list)
