@@ -4,9 +4,9 @@ import code_3rd
 grammar_10_uni = []
 grammar_11_uni = []
 grammar_12_uni = []
-grammar_12_2_uni1 = []
-grammar_12_2_uni2 = []
-grammar_12_2_uni3 = []
+grammar_12_uni1 = []
+grammar_12_uni2 = []
+grammar_12_uni3 = []
 grammar_18_uni = []
 
 
@@ -42,149 +42,139 @@ def grammar_11(a):
 
 def grammar_12(a):
     for i in range(code_3rd.count):
-        grammar_12_uni.append(code_3rd.uni_data[i])
-        code_3rd.jong_uni.append(((code_3rd.uni_data[i] - 44032) % 588) % 28)  # 종성
+        grammar_12_uni.append(code_3rd.uni_data[a])
+        grammar_12_uni1.append((code_3rd.uni_data[a] - 44032) // 588)  # 초성
+        grammar_12_uni2.append(((code_3rd.uni_data[a] - 44032) % 588) // 28)  # 중성
+        grammar_12_uni3.append(((code_3rd.uni_data[a] - 44032) % 588) % 28)  # 종성
+
+
 
     # all_list[3][0]: {0~11}={이음줄,가,나,다,마,바,사,자,카,타,파,하}
 
     if 44032 <= grammar_12_uni[a] <= 44059:
         code_3rd.all_list[3][0] = 1
-        code_3rd.all_list[0][2] = code_3rd.jong_uni[a]
+        code_3rd.all_list[1][3] = grammar_12_uni3[a]
 
     elif 445208 <= grammar_12_uni[a] <= 45235:
         code_3rd.all_list[3][0] = 2
-        code_3rd.all_list[0][2] = code_3rd.jong_uni[a]
+        code_3rd.all_list[1][3] = grammar_12_uni3[a]
 
     elif 45796 <= grammar_12_uni[a] <= 45823:
         code_3rd.all_list[3][0] = 3
-        code_3rd.all_list[0][2] = code_3rd.jong_uni[a]
+        code_3rd.all_list[1][3] = grammar_12_uni3[a]
 
     elif 47560 <= grammar_12_uni[a] <= 47587:
         code_3rd.all_list[3][0] = 4
-        code_3rd.all_list[0][2] = code_3rd.jong_uni[a]
+        code_3rd.all_list[1][3] = grammar_12_uni3[a]
 
     elif 48148 <= grammar_12_uni[a] <= 48175:
         code_3rd.all_list[3][0] = 5
-        code_3rd.all_list[0][2] = code_3rd.jong_uni[a]
+        code_3rd.all_list[1][3] = grammar_12_uni3[a]
 
     elif 49324 <= grammar_12_uni[a] <= 49351:
         code_3rd.all_list[3][0] = 6
-        code_3rd.all_list[0][2] = code_3rd.jong_uni[a]
+        code_3rd.all_list[1][3] = grammar_12_uni3[a]
 
     elif 51088 <= grammar_12_uni[a] <= 51115:
         code_3rd.all_list[3][0] = 7
-        code_3rd.all_list[0][2] = code_3rd.jong_uni[a]
+        code_3rd.all_list[1][3] = grammar_12_uni3[a]
 
     elif 52852 <= grammar_12_uni[a] <= 52879:
         code_3rd.all_list[3][0] = 8
-        code_3rd.all_list[0][2] = code_3rd.jong_uni[a]
+        code_3rd.all_list[1][3] = grammar_12_uni3[a]
 
     elif 53440 <= grammar_12_uni[a] <= 53467:
         code_3rd.all_list[3][0] = 9
-        code_3rd.all_list[0][2] = code_3rd.jong_uni[a]
+        code_3rd.all_list[1][3] = grammar_12_uni3[a]
 
     elif 54028 <= grammar_12_uni[a] <= 54055:
         code_3rd.all_list[3][0] = 10
-        code_3rd.all_list[0][2] = code_3rd.jong_uni[a]
+        code_3rd.all_list[1][3] = grammar_12_uni3[a]
 
     elif 54616 <= grammar_12_uni[a] <= 54643:
         code_3rd.all_list[3][0] = 11
-        code_3rd.all_list[0][2] = code_3rd.jong_uni[a]
+        code_3rd.all_list[1][3] = grammar_12_uni3[a]
 
-
-def grammar_12_2(a):
-    grammar_12_2_uni1.append((code_3rd.uni_data[a] - 44032) // 588)  # 초성
-    grammar_12_2_uni2.append(((code_3rd.uni_data[a] - 44032) % 588) // 28)  # 중성
-    grammar_12_2_uni3.append(((code_3rd.uni_data[a] - 44032) % 588) % 28)  # 종성
-
-    # 588
-
-    if grammar_12_2_uni2 == 4:
-        if grammar_12_2_uni3 == 2:
+    if grammar_12_uni2[a] == 4:
+        if grammar_12_uni3[a] == 2:
             code_3rd.all_list[3][0] = 12  # 억
-            code_3rd.all_list[0][0] = grammar_12_2_uni1
-            code_3rd.all_list[0][1] = -1
-            code_3rd.all_list[0][2] = -1
-        elif grammar_12_2_uni3 == 4:
-            code_3rd.all_list[3][0] = 13  # 언
-            code_3rd.all_list[0][0] = grammar_12_2_uni1
-            code_3rd.all_list[0][1] = -1
-            code_3rd.all_list[0][2] = -1
-        elif grammar_12_2_uni3 == 8:
-            code_3rd.all_list[3][0] = 14  # 얼
-            code_3rd.all_list[0][0] = grammar_12_2_uni1
-            code_3rd.all_list[0][1] = -1
-            code_3rd.all_list[0][2] = -1
-    elif grammar_12_2_uni2 == 6:
-        if grammar_12_2_uni3 == 4:
-            code_3rd.all_list[3][0] = 15  # 연
-            code_3rd.all_list[0][0] = grammar_12_2_uni1
-            code_3rd.all_list[0][1] = -1
-            code_3rd.all_list[0][2] = -1
-        elif grammar_12_2_uni3 == 8:
-            code_3rd.all_list[3][0] = 16  # 열
-            code_3rd.all_list[0][0] = grammar_12_2_uni1
-            code_3rd.all_list[0][1] = -1
-            code_3rd.all_list[0][2] = -1
-        elif grammar_12_2_uni3 == 21:
-            code_3rd.all_list[3][0] = 17  # 영
-            code_3rd.all_list[0][0] = grammar_12_2_uni1
-            code_3rd.all_list[0][1] = -1
-            code_3rd.all_list[0][2] = -1
-    elif grammar_12_2_uni2 == 8:
-        if grammar_12_2_uni3 == 2:
-            code_3rd.all_list[3][0] = 18  # 옥
-            code_3rd.all_list[0][0] = grammar_12_2_uni1
-            code_3rd.all_list[0][1] = -1
-            code_3rd.all_list[0][2] = -1
-        elif grammar_12_2_uni3 == 4:
-            code_3rd.all_list[3][0] = 19  # 온
-            code_3rd.all_list[0][0] = grammar_12_2_uni1
-            code_3rd.all_list[0][1] = -1
-            code_3rd.all_list[0][2] = -1
-        elif grammar_12_2_uni3 == 21:
-            code_3rd.all_list[3][0] = 20  # 옹
-            code_3rd.all_list[0][0] = grammar_12_2_uni1
-            code_3rd.all_list[0][1] = -1
-            code_3rd.all_list[0][2] = -1
-    elif grammar_12_2_uni2 == 13:
-        if grammar_12_2_uni3 == 4:
-            code_3rd.all_list[3][0] = 21  # 운
-            code_3rd.all_list[0][0] = grammar_12_2_uni1
-            code_3rd.all_list[0][1] = -1
-            code_3rd.all_list[0][2] = -1
-        elif grammar_12_2_uni3 == 8:
-            code_3rd.all_list[3][0] = 22  # 울
-            code_3rd.all_list[0][0] = grammar_12_2_uni1
-            code_3rd.all_list[0][1] = -1
-            code_3rd.all_list[0][2] = -1
-    elif grammar_12_2_uni2 == 18:
-        if grammar_12_2_uni3 == 4:
-            code_3rd.all_list[3][0] = 23  # 은
-            code_3rd.all_list[0][0] = grammar_12_2_uni1
-            code_3rd.all_list[0][1] = -1
-            code_3rd.all_list[0][2] = -1
-        elif grammar_12_2_uni3 == 8:
-            code_3rd.all_list[3][0] = 24  # 을
-            code_3rd.all_list[0][0] = grammar_12_2_uni1
-            code_3rd.all_list[0][1] = -1
-            code_3rd.all_list[0][2] = -1
-    elif grammar_12_2_uni2 == 20:
-        if grammar_12_2_uni3 == 4:
-            code_3rd.all_list[3][0] = 25   # 인
-            code_3rd.all_list[0][0] = grammar_12_2_uni1
-            code_3rd.all_list[0][1] = -1
-            code_3rd.all_list[0][2] = -1
-    else:
-        code_3rd.all_list[3][0] = -1
+            code_3rd.all_list[0][0] = grammar_12_uni1[a]
+            code_3rd.all_list[1][3] = grammar_12_uni3[a]
 
-    if grammar_12_2_uni1 == 0:
-        if grammar_12_2_uni2 == 4:
-            if grammar_12_2_uni3 == 9:
+        elif grammar_12_uni3[a] == 4:
+            code_3rd.all_list[3][0] = 13  # 언
+            code_3rd.all_list[0][0] = grammar_12_uni1[a]
+            code_3rd.all_list[1][3] = grammar_12_uni3[a]
+
+        elif grammar_12_uni3[a] == 8:
+            code_3rd.all_list[3][0] = 14  # 얼
+            code_3rd.all_list[0][0] = grammar_12_uni1[a]
+            code_3rd.all_list[1][3] = grammar_12_uni3[a]
+
+    elif grammar_12_uni2[a] == 6:
+        if grammar_12_uni3[a] == 4:
+            code_3rd.all_list[3][0] = 15  # 연
+            code_3rd.all_list[0][0] = grammar_12_uni1[a]
+            code_3rd.all_list[1][3] = grammar_12_uni3[a]
+
+        elif grammar_12_uni3[a] == 8:
+            code_3rd.all_list[3][0] = 16  # 열
+            code_3rd.all_list[0][0] = grammar_12_uni1[a]
+            code_3rd.all_list[1][3] = grammar_12_uni3[a]
+
+        elif grammar_12_uni3[a] == 21:
+            code_3rd.all_list[3][0] = 17  # 영
+            code_3rd.all_list[0][0] = grammar_12_uni1[a]
+            code_3rd.all_list[1][3] = grammar_12_uni3[a]
+
+    elif grammar_12_uni2[a] == 8:
+        if grammar_12_uni3[a] == 2:
+            code_3rd.all_list[3][0] = 18  # 옥
+            code_3rd.all_list[0][0] = grammar_12_uni1[a]
+            code_3rd.all_list[1][3] = grammar_12_uni3[a]
+
+        elif grammar_12_uni3[a] == 4:
+            code_3rd.all_list[3][0] = 19  # 온
+            code_3rd.all_list[0][0] = grammar_12_uni1[a]
+            code_3rd.all_list[1][3] = grammar_12_uni3[a]
+
+        elif grammar_12_uni3[a] == 21:
+            code_3rd.all_list[3][0] = 20  # 옹
+            code_3rd.all_list[0][0] = grammar_12_uni1[a]
+            code_3rd.all_list[1][3] = grammar_12_uni3[a]
+
+    elif grammar_12_uni2[a] == 13:
+        if grammar_12_uni3[a] == 4:
+            code_3rd.all_list[3][0] = 21  # 운
+            code_3rd.all_list[0][0] = grammar_12_uni1[a]
+            code_3rd.all_list[1][3] = grammar_12_uni3[a]
+
+        elif grammar_12_uni3[a] == 8:
+            code_3rd.all_list[3][0] = 22  # 울
+            code_3rd.all_list[0][0] = grammar_12_uni1[a]
+            code_3rd.all_list[1][3] = grammar_12_uni3[a]
+
+    elif grammar_12_uni2[a] == 18:
+        if grammar_12_uni3[a] == 4:
+            code_3rd.all_list[3][0] = 23  # 은
+            code_3rd.all_list[0][0] = grammar_12_uni1[a]
+            code_3rd.all_list[1][3] = grammar_12_uni3[a]
+
+        elif grammar_12_uni3[a] == 8:
+            code_3rd.all_list[3][0] = 24  # 을
+            code_3rd.all_list[0][0] = grammar_12_uni1[a]
+            code_3rd.all_list[1][3] = grammar_12_uni3[a]
+
+    elif grammar_12_uni2[a] == 20:
+        if grammar_12_uni3[a] == 4:
+            code_3rd.all_list[3][0] = 25   # 인
+            code_3rd.all_list[0][0] = grammar_12_uni1[a]
+            code_3rd.all_list[1][3] = grammar_12_uni3[a]
+
+    if grammar_12_uni1[a] == 0:
+        if grammar_12_uni2[a] == 4:
+            if grammar_12_uni3[a] == 9:
                 code_3rd.all_list[3][0] = 26  # 것
-                code_3rd.all_list[0][0] = -1
-                code_3rd.all_list[0][1] = -1
-                code_3rd.all_list[0][2] = -1
 
 
 # all_list[3][0]={12~26}{억,언,얼,언,열,영,옥,온,옹,운,울,은,을,인,것}
@@ -224,7 +214,6 @@ def grammar_18(a):
                 elif grammar_18_uni[a+2] == 54616:   # "하"
                     if grammar_18_uni[a+3] == 50668:   # 그리하여
                         code_3rd.all_list[3][1] = 6
-
 
 
 

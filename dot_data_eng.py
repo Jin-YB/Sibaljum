@@ -697,8 +697,7 @@ def number_():
         dot_data.dot[0][5] = 0
 
 
-
-def sign():  #  총 14개 ' ' '!' '(' ')' ',' '.' '/' ':' ';' '?' '[' ']' '{' '}'
+def sign():
     if code_3rd.all_list[2][1] == 32:  # ' ' 공백
         dot_data.dot[0][0] = 0
         dot_data.dot[0][1] = 0
@@ -874,8 +873,6 @@ def sign():  #  총 14개 ' ' '!' '(' ')' ',' '.' '/' ':' ';' '?' '[' ']' '{' '}
         dot_data.dot[1][4] = 1
         dot_data.dot[1][5] = 1
 
-''' @빠진 기호들@
-    
     if code_3rd.all_list[2][1] == 34:  # ' " '
         dot_data.dot[0][0] = 0
         dot_data.dot[0][1] = 1
@@ -1027,4 +1024,3 @@ def sign():  #  총 14개 ' ' '!' '(' ')' ',' '.' '/' ':' ';' '?' '[' ']' '{' '}
         dot_data.dot[0][3] = 0
         dot_data.dot[0][4] = 0
         dot_data.dot[0][5] = 0
-'''
