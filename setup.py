@@ -25,9 +25,10 @@ def start_data(stk):
         if 11 >= code_3rd.all_list[3][0] >= 1:  # 12항 가~하
             dot_data.grammar()
             circuit.play()
-            dot_data.reset()
-            dot_data.jong()
-            circuit.play()
+            for i in range(2):
+                dot_data.reset()
+                dot_data.jong(i)
+                circuit.play()
             idx_s += 1
         elif 26 >= code_3rd.all_list[3][0] >= 12:  # 12항 억 ~ 것
             dot_data.cho()
@@ -36,10 +37,9 @@ def start_data(stk):
             dot_data.grammar()
             circuit.play()
             code_3rd.trans_jong()
-            for i in range(2):
-                dot_data.reset()
-                dot_data.jong(i)
-                circuit.play()
+            dot_data.reset()
+            dot_data.jong(1)
+            circuit.play()
             idx_s += 1
         # 16항 예외적 경우 추가 해야함
         elif code_3rd.all_list[3][1] != -1:               # 18항
