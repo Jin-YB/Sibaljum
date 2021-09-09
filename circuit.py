@@ -7,9 +7,9 @@ def play():
     for i in range(2):
         for j in range(6):
             if dot_data.dot[i][j] == 1:
-                print("D")
+                print("1")
             elif dot_data.dot[i][j] == 0:
-                print("I")
+                print("0")
 
     dot_data.reset()
 
